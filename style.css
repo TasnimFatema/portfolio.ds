@@ -1,0 +1,186 @@
+/* ===== root & reset ===== */
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --accent1: #FFE5D4;  /* pastel peach */
+    --accent2: #D4FFE5;  /* pastel mint */
+    --accent3: #E5D4FF;  /* pastel lavender */
+    --nav-bg: #f8f8f8;
+    --card-bg: #ffffff;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--nav-bg);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+  }
+  .navbar a:hover { color: var(--accent3); }
+  
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 6rem 1rem 3rem; /* top padding accounts for fixed nav */
+    max-width: 800px;
+    margin: auto;
+  }
+  .intro { background: var(--accent1); border-radius: 8px; text-align: center; }
+  .intro h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .tagline { font-style: italic; margin-bottom: 1rem; }
+  
+  /* ===== PROJECT CARDS ===== */
+  .projects .card {
+    background: var(--accent2);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .projects .card:hover {
+    transform: scale(1.05);
+  }
+  .projects .card h3 { margin-bottom: 0.5rem; }
+  .projects .card a {
+    display:inline-block;
+    margin-top:0.5rem;
+    text-decoration:none;
+    font-weight:bold;
+  }
+  .projects .card a:hover { color: var(--accent3); }
+  
+  /* ===== LISTS ===== */
+  .skills ul {
+    list-style: square inside;
+    margin: 1rem 0;
+  }
+  
+  .skills li { margin: 0.5rem 0; }
+  
+  /* ===== BACK TO TOP LINKS ===== */
+  .back-link {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .back-link:hover { color: var(--accent3); }
+  
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .skill-card {
+    background: linear-gradient(145deg, #f9f4ff, #e6fffa);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #f7d1ff, #d0fff3);
+    color: #333;
+  }
+  .edu-card, .contact-box {
+    background: var(--accent2);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .edu-card:hover, .contact-box:hover {
+    transform: scale(1.02);
+    background: linear-gradient(145deg, #f0eaff, #e7fff6);
+  }
+  
+  .edu-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--text);
+  }
+  
+  .contact-box p, .edu-card p {
+    margin: 0.3rem 0;
+  }
+  /* ===== EDU & CONTACT CARD STYLE ===== */
+.edu-card, .contact-box {
+  background: var(--accent2);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem; /* Added more space between sections */
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.edu-card:hover, .contact-box:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #f0eaff, #d0f8f3);
+}
+
+.edu-card h3, .contact-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem; /* Increased margin for better spacing */
+}
+
+.edu-card ul, .contact-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.edu-card ul li, .contact-box ul li {
+  margin: 0.8rem 0; /* More space between list items */
+}
+
+.contact-box a {
+  font-weight: bold;
+  color: var(--accent3);
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  color: var(--text);
+}
+
+/* ===== BACK TO TOP LINK ===== */
+.back-link {
+  display: block;
+  text-align: right;
+  margin-top: 1.5rem; /* Added more space above the back-to-top link */
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.back-link:hover {
+  color: var(--accent3);
+}
